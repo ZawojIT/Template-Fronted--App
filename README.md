@@ -28,6 +28,8 @@ TEMPLATE-FRONTEND--APP
 ├── settings files...
 ```
 
-## Getting Started
+## TODO
 
-### Dependencies
+- [ ] Initialize redux
+- [ ] Initialize Cypress
+- [ ] Initialize EsLint best practices
