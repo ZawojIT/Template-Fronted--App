@@ -23,6 +23,7 @@ TEMPLATE-FRONTEND--APP
 │   ├── layouts (layouts and data providers)
 │   ├── pages (pages)
 │   ├── sections (sections "modules" where business logic is implemented, components are used and pages are composed)
+│   ├── static (for assets (images, fonts, etc.) and mocks (json, etc.))
 │   ├── types (typescript types)
 │   └── utils (utility functions)
 ├── settings files...

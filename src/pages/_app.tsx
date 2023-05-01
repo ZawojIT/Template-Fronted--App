@@ -1,9 +1,14 @@
 import "@/common/styles/globals.css";
+
 import createEmotionCache from "@/utils/createEmotionCache";
 import { CacheProvider, EmotionCache } from "@emotion/react";
+// next
 import { NextPage } from "next";
-import type { AppProps } from "next/app";
 import Head from "next/head";
+import type { AppProps } from "next/app";
+// redux
+import { store } from "@/redux/store";
+import { Provider as ReduxProvider } from "react-redux";
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -26,7 +31,9 @@ export default function App(props: MyAppProps) {
       <Head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
-      {getLayout(<Component {...pageProps} />)}
+      <ReduxProvider store={store}>
+        {getLayout(<Component {...pageProps} />)}
+      </ReduxProvider>
     </CacheProvider>
   );
 }
